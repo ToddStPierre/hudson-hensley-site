@@ -27,3 +27,6 @@ pnpm-debug.log*
 .lighthouseci/
 test-results/
 playwright-report/
+
+# superpowers workspace
+.superpowers/

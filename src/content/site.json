@@ -1,0 +1,52 @@
+{
+  "name": "Hudson Hensley",
+  "tagline": "A young actor based in Los Angeles and Nashville — breakout role in Song Sung Blue, opposite Hugh Jackman and Kate Hudson.",
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Film & TV", "href": "#film-tv" },
+    { "label": "Press", "href": "#press" },
+    { "label": "About", "href": "#about" }
+  ],
+  "hero": { "image": "hero.jpg", "imageAlt": "Hudson Hensley, headshot", "ctaTrailer": "Watch the trailer", "imdbUrl": "https://www.imdb.com/name/nm16617332/" },
+  "feature": {
+    "heading": "Song Sung Blue",
+    "youtubeId": "ZqU7iiHFCzw",
+    "posterImage": "still-song-sung-blue.jpg",
+    "posterAlt": "Hudson Hensley in Song Sung Blue",
+    "body": "Song Sung Blue is a 2025 musical drama written and directed by Craig Brewer and starring Hugh Jackman and Kate Hudson. Hudson Hensley plays Dayna Cartwright, the son of Kate Hudson's character, Claire Sardina, from her first marriage."
+  },
+  "award": { "heading": "Award Nomination", "text": "Nominated — 2026 Young Artist Academy Award, Feature Film Artists." },
+  "credits": [
+    { "title": "Song Sung Blue", "year": "2025", "role": "Dayna Cartwright", "note": "Musical drama written and directed by Craig Brewer; starring Hugh Jackman and Kate Hudson.", "image": "still-song-sung-blue.jpg", "imageAlt": "Hudson Hensley in Song Sung Blue" },
+    { "title": "The Wildman of Shaggy Creek", "year": null, "role": "Scott", "note": "Lead role in the independent feature, adapted from a children's book.", "image": "still-wildman.jpg", "imageAlt": "Hudson Hensley in The Wildman of Shaggy Creek" },
+    { "title": "Stage", "year": null, "role": null, "note": "Thirteen Jr. and Legally Blonde Jr., Nashville Theatre School.", "image": null, "imageAlt": null }
+  ],
+  "press": [
+    { "outlet": "Deadline", "headline": "‘Song Sung Blue’ Oscar Nominee Kate Hudson Says \"Claire Is So Happy\"", "url": "https://deadline.com/2026/01/song-sung-blue-oscar-nominee-kate-hudson-says-claire-is-so-happy-with-the-film-despite-some-family-comments-running-point-season-2-update-1236693276/" },
+    { "outlet": "The Hollywood Reporter", "headline": "‘Song Sung Blue’ Review: Hugh Jackman and Kate Hudson Bring Sparkling Chemistry and Impressive Musicality to Disarming Boomer Love Story", "url": "https://www.hollywoodreporter.com/movies/movie-reviews/song-sung-blue-review-hugh-jackman-kate-hudson-neil-diamond-1236410565/" },
+    { "outlet": "BroadwayWorld", "headline": "Hugh Jackman-Led SONG SUNG BLUE Sets Digital and Blu-ray Release Dates", "url": "https://www.broadwayworld.com/article/Hugh-Jackman-Led-SONG-SUNG-BLUE-Sets-Digital-and-Blu-ray-Release-Dates-20260112" }
+  ],
+  "about": {
+    "heading": "About",
+    "image": "portrait.jpg",
+    "imageAlt": "Hudson Hensley portrait",
+    "paragraphs": [
+      "Hudson Hensley is a young actor working in film and on stage, based between Los Angeles and Nashville. He is known for the energy, emotional directness and natural screen presence he brings to a role. His breakout is the 2025 musical drama Song Sung Blue, written and directed by Craig Brewer, in which he appears alongside Hugh Jackman and Kate Hudson.",
+      "In Song Sung Blue — a story about music, love and reinvention — Hensley plays Dayna Cartwright, the son of Claire Sardina (Kate Hudson) from her first marriage, a role that places him in a large ensemble opposite Jackman and Hudson. Alongside the film he has the lead role of Scott in the independent feature The Wildman of Shaggy Creek, adapted from a children's book, and has performed on stage with the Nashville Theatre School in Thirteen Jr. and Legally Blonde Jr."
+    ],
+    "basedIn": "Based in Los Angeles and Nashville."
+  },
+  "representation": [
+    { "role": "Manager", "name": "PureTalent Mgt", "phone": "818-618-9786", "phoneHref": "tel:+18186189786" },
+    { "role": "Agency", "name": "DDO Kids", "phone": "323-462-8000", "phoneHref": "tel:+13234628000" },
+    { "role": "Agency", "name": "FFT Models", "phone": "212-686-4343", "phoneHref": "tel:+12126864343" },
+    { "role": "Mom", "name": "Kate Hensley", "phone": null, "phoneHref": null }
+  ],
+  "contact": { "heading": "Get in touch", "blurb": "For casting, press and general enquiries.", "accessKey": "REPLACE-WITH-WEB3FORMS-ACCESS-KEY", "subjectLine": "New enquiry from hudsonhensley.com" },
+  "socials": [
+    { "label": "IMDb", "url": "https://www.imdb.com/name/nm16617332/" },
+    { "label": "Instagram", "url": "https://www.instagram.com/thehudsonhensley" },
+    { "label": "TikTok", "url": "https://www.tiktok.com/@thehudsonhensley_" }
+  ],
+  "footerCredit": "© Copyright Hudson Hensley 2026. All rights reserved. Website Created & Hosted By: More Views Pro."
+}
