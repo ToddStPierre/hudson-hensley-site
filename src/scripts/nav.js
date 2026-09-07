@@ -20,11 +20,13 @@ document.addEventListener("keydown", (e) => {
     toggle.focus();
   }
 });
-const links = [...menu.querySelectorAll("a")];
-const io = new IntersectionObserver((entries) => {
-  for (const en of entries) {
-    if (!en.isIntersecting) continue;
-    links.forEach((l) => l.classList.toggle("is-active", l.getAttribute("href") === `#${en.target.id}`));
-  }
-}, { rootMargin: "-45% 0px -50% 0px" });
-["home", "film-tv", "press", "about"].forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+if (menu && toggle) {
+  const links = [...menu.querySelectorAll("a")];
+  const io = new IntersectionObserver((entries) => {
+    for (const en of entries) {
+      if (!en.isIntersecting) continue;
+      links.forEach((l) => l.classList.toggle("is-active", l.getAttribute("href") === `#${en.target.id}`));
+    }
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  ["home", "film-tv", "press", "about"].forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+}

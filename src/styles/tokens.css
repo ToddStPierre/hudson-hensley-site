@@ -11,6 +11,8 @@
   --card: #F3F4F6;
   --border: #E5E7EB;
   --imdb: #F5C518;
+  --on-navy: #FFFFFF;
+  --rule-onNavy: rgba(255, 255, 255, 0.12);
 
   /* Type families */
   --font-body: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
