@@ -27,3 +27,8 @@ test("hero: one h1 with the name, tagline, both CTAs", () => {
   expect(html).toMatch(/href="https:\/\/www\.imdb\.com\/name\/nm16617332\/"[^>]*target="_blank"[^>]*rel="noopener"/);
   expect(html).toMatch(/<img[^>]+alt="Hudson Hensley, headshot"/);
 });
+
+test("award strip renders the verbatim nomination line", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/Nominated — 2026 Young Artist Academy Award, Feature Film Artists\./);
+});

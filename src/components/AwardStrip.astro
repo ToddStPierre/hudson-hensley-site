@@ -1,0 +1,15 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+const { award } = loadSite();
+---
+<section class="award" aria-label="Award nomination">
+  <div class="container">
+    <h2 class="sr-only">{award.heading}</h2>
+    <p class="award__text">{award.text}</p>
+  </div>
+</section>
+<style>
+  .award { background:var(--blue); color:var(--on-navy); padding-block:var(--space-5); text-align:center; }
+  .award__text { font-family:var(--font-display); font-size:var(--step-2); margin:0; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+</style>
