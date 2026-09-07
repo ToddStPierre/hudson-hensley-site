@@ -41,3 +41,12 @@ test("film & tv: three credit cards incl. Song Sung Blue and Stage", () => {
   expect(html).toMatch(/The Wildman of Shaggy Creek/);
   expect(html).toMatch(/Thirteen Jr\. and Legally Blonde Jr\., Nashville Theatre School\./);
 });
+
+test("press: three cards, each linking out to the real article", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/id="press"/);
+  expect((html.match(/class="pcard"/g) || []).length).toBe(3);
+  for (const host of ["deadline.com", "hollywoodreporter.com", "broadwayworld.com"]) {
+    expect(html).toMatch(new RegExp(`href="https://[^"]*${host.replace(".", "\\.")}[^"]*"[^>]*target="_blank"[^>]*rel="noopener"`));
+  }
+});

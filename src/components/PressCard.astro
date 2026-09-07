@@ -1,0 +1,18 @@
+---
+interface Props { outlet: string; headline: string; url: string }
+const { outlet, headline, url } = Astro.props;
+---
+<li class="pcard">
+  <p class="pcard__outlet">{outlet}</p>
+  <p class="pcard__headline">{headline}</p>
+  <a class="pcard__link" href={url} target="_blank" rel="noopener">
+    Read <span aria-hidden="true">→</span><span class="sr-only"> the {outlet} article</span>
+  </a>
+</li>
+<style>
+  .pcard { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2); }
+  .pcard__outlet { font-family:var(--font-display); font-size:var(--step-1); margin:0; }
+  .pcard__headline { margin:0; flex-grow:1; }
+  .pcard__link { font-weight:600; text-decoration:none; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+</style>

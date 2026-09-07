@@ -1,0 +1,15 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+import PressCard from "./PressCard.astro";
+const { press } = loadSite();
+---
+<section id="press" class="section press">
+  <div class="container">
+    <h2>Press</h2>
+    <ul class="press__grid">{press.map((p) => <PressCard {...p} />)}</ul>
+  </div>
+</section>
+<style>
+  .press__grid { list-style:none; margin:var(--space-5) 0 0; padding:0; display:grid; gap:var(--space-4); }
+  @media (min-width:720px) { .press__grid { grid-template-columns:repeat(3, 1fr); } }
+</style>
