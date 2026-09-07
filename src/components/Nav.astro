@@ -1,0 +1,37 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+const site = loadSite();
+---
+<header class="nav" data-open="false">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#home">{site.name}</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav__bars" aria-hidden="true"></span><span class="sr-only">Menu</span>
+    </button>
+    <nav>
+      <ul id="nav-menu" class="nav__menu">
+        {site.nav.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .nav { position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--navy-800) 92%, transparent); backdrop-filter:blur(8px); }
+  .nav__inner { display:flex; align-items:center; justify-content:space-between; min-height:60px; }
+  .nav__brand { font-family:var(--font-display); color:#fff; text-transform:uppercase; letter-spacing:.06em; text-decoration:none; font-size:var(--step-1); }
+  .nav__menu { list-style:none; display:flex; gap:var(--space-4); margin:0; padding:0; }
+  .nav__menu a { color:#fff; text-decoration:none; }
+  .nav__menu a.is-active { color:var(--blue-onNavy); }
+  .nav__toggle { display:none; background:none; border:0; padding:12px; cursor:pointer; }
+  .nav__bars, .nav__bars::before, .nav__bars::after { display:block; width:24px; height:2px; background:#fff; content:""; }
+  .nav__bars::before { transform:translateY(-7px); } .nav__bars::after { transform:translateY(5px); }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  @media (max-width:720px) {
+    .nav__toggle { display:block; }
+    .nav__menu { position:absolute; inset:60px 0 auto 0; flex-direction:column; gap:0; background:var(--navy-800); }
+    .nav__menu li { border-top:1px solid rgba(255,255,255,.1); }
+    .nav__menu a { display:block; padding:var(--space-3) var(--space-4); }
+    .nav[data-open="false"] #nav-menu { display:none; }
+  }
+</style>
+<script src="../scripts/nav.js"></script>

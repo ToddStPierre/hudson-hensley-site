@@ -1,5 +1,5 @@
 import { z } from "astro/zod";
-import { readFileSync } from "node:fs";
+import rawSite from "./site.json";
 
 export const siteSchema = z.object({
   name: z.string(),
@@ -23,6 +23,5 @@ export const siteSchema = z.object({
 export type Site = z.infer<typeof siteSchema>;
 
 export function loadSite(): Site {
-  const raw = JSON.parse(readFileSync(new URL("./site.json", import.meta.url), "utf8"));
-  return siteSchema.parse(raw);
+  return siteSchema.parse(rawSite);
 }
