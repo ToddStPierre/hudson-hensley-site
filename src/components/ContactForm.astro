@@ -1,0 +1,29 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+const { contact } = loadSite();
+---
+<div class="contact">
+  <h2>{contact.heading}</h2>
+  <p>{contact.blurb}</p>
+  <form class="contact__form">
+    <input type="hidden" name="access_key" value={contact.accessKey} />
+    <input type="hidden" name="subject" value={contact.subjectLine} />
+    <input type="checkbox" name="botcheck" class="contact__hp" tabindex="-1" autocomplete="off" />
+    <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+    <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+    <label>Message<textarea name="message" rows="5" required></textarea></label>
+    <button type="submit" class="btn btn--primary">Send</button>
+    <p class="contact__status" role="status" aria-live="polite" hidden></p>
+  </form>
+</div>
+<style>
+  .contact { margin-top:var(--space-8); max-width:36rem; }
+  .contact__form { display:grid; gap:var(--space-3); margin-top:var(--space-4); }
+  .contact__form label { display:grid; gap:var(--space-1); font-weight:600; }
+  .contact__form input, .contact__form textarea { font:inherit; padding:.7em .8em; border:1px solid var(--border); border-radius:var(--radius); background:#fff; }
+  .contact__hp { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+  .contact__status { margin:0; font-weight:600; }
+  .contact__status[data-state="ok"] { color:var(--blue); }
+  .contact__status[data-state="err"] { color:#b91c1c; }
+</style>
+<script src="../scripts/contact.js"></script>

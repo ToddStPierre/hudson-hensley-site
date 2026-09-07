@@ -58,3 +58,29 @@ test("about: portrait with alt, based-in line, two body paragraphs", () => {
   expect(html).toMatch(/Based in Los Angeles and Nashville\./);
   expect((html.match(/class="about__p"/g) || []).length).toBe(2);
 });
+
+test("representation: tel: links with the exact numbers, no emails", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/id="contact"/);
+  for (const tel of ["tel:+18186189786", "tel:+13234628000", "tel:+12126864343"]) {
+    expect(html).toContain(`href="${tel}"`);
+  }
+  expect(html).toMatch(/Kate Hensley/);
+  const section = html.split('id="contact"')[1].split("</section>")[0];
+  expect(section).not.toMatch(/mailto:|@gmail\.com/);
+});
+
+test("contact form: posts to Web3Forms with the access key and honeypot", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/<form[^>]*class="contact__form"/);
+  expect(html).toMatch(/name="access_key"[^>]*value="[^"]+"/);
+  expect(html).toMatch(/name="botcheck"/);
+  expect(html).toMatch(/name="email"[^>]*type="email"|type="email"[^>]*name="email"/);
+});
+
+test("footer: verbatim credit and outbound social links", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toContain("© Copyright Hudson Hensley 2026. All rights reserved. Website Created & Hosted By: More Views Pro.");
+  expect(html).toMatch(/href="https:\/\/www\.instagram\.com\/thehudsonhensley"[^>]*rel="noopener"/);
+  expect(html).toMatch(/href="https:\/\/www\.tiktok\.com\/@thehudsonhensley_"[^>]*rel="noopener"/);
+});

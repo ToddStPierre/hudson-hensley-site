@@ -1,0 +1,27 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+import ContactForm from "./ContactForm.astro";
+const { representation } = loadSite();
+---
+<section id="contact" class="section rep">
+  <div class="container">
+    <h2>Representation</h2>
+    <ul class="rep__grid">
+      {representation.map((r) => (
+        <li>
+          <p class="rep__role">{r.role}</p>
+          <p class="rep__name">{r.name}</p>
+          {r.phone && <a href={r.phoneHref}>{r.phone}</a>}
+        </li>
+      ))}
+    </ul>
+    <ContactForm />
+  </div>
+</section>
+<style>
+  .rep__grid { list-style:none; margin:var(--space-5) 0 0; padding:0; display:grid; gap:var(--space-4); }
+  @media (min-width:640px) { .rep__grid { grid-template-columns:repeat(2, 1fr); } }
+  @media (min-width:960px) { .rep__grid { grid-template-columns:repeat(4, 1fr); } }
+  .rep__role { font-family:var(--font-display); color:var(--blue); margin:0 0 var(--space-1); }
+  .rep__name { font-weight:600; margin:0 0 var(--space-1); }
+</style>
