@@ -2,7 +2,7 @@
 import { loadSite } from "../content/site.schema.ts";
 const { award } = loadSite();
 ---
-<section class="award" aria-label="Award nomination">
+<section id="award" class="award" aria-label="Award nomination">
   <div class="container">
     <h2 class="sr-only">{award.heading}</h2>
     <p class="award__text">{award.text}</p>

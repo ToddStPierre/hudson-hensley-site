@@ -8,7 +8,7 @@ const { contact } = loadSite();
   <form class="contact__form">
     <input type="hidden" name="access_key" value={contact.accessKey} />
     <input type="hidden" name="subject" value={contact.subjectLine} />
-    <input type="checkbox" name="botcheck" class="contact__hp" tabindex="-1" autocomplete="off" />
+    <input type="checkbox" name="botcheck" class="contact__hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <label>Name<input type="text" name="name" required autocomplete="name" /></label>
     <label>Email<input type="email" name="email" required autocomplete="email" /></label>
     <label>Message<textarea name="message" rows="5" required></textarea></label>

@@ -13,6 +13,11 @@ a:hover { color:var(--blue-hover); }
 :focus-visible { outline:3px solid var(--blue); outline-offset:2px; border-radius:4px; }
 .container { width:min(100% - 2*var(--space-3), var(--maxw)); margin-inline:auto; }
 .section { padding-block:var(--space-8); }
+
+.btn { display:inline-flex; align-items:center; justify-content:center; padding:.8em 1.4em; border-radius:var(--radius); font-weight:600; text-decoration:none; }
+.btn--primary { background:var(--blue); color:var(--on-navy); } .btn--primary:hover { background:var(--blue-hover); }
+.btn--imdb { background:var(--imdb); color:#000; }
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 
 @media (prefers-reduced-motion: no-preference) {
