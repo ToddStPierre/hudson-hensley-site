@@ -1,7 +1,7 @@
 @import "./tokens.css";
 
-@font-face { font-family:"Outfit"; src:url("/fonts/Outfit-Variable.woff2") format("woff2-variations"); font-weight:300 700; font-display:swap; }
-@font-face { font-family:"Titan One"; src:url("/fonts/TitanOne-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+@font-face { font-family:"Outfit"; src:url("/hudson-hensley-site/fonts/Outfit-Variable.woff2") format("woff2-variations"); font-weight:300 700; font-display:swap; }
+@font-face { font-family:"Titan One"; src:url("/hudson-hensley-site/fonts/TitanOne-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
 
 *,*::before,*::after { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
