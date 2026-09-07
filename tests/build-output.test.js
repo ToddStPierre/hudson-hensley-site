@@ -17,3 +17,13 @@ test("index.html applies the design tokens and sets lang", () => {
   expect(html).toMatch(/<html[^>]*lang="en"/);
   expect(html).toMatch(/--navy-900|--blue\b/);
 });
+
+test("hero: one h1 with the name, tagline, both CTAs", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  const h1s = html.match(/<h1[\s>]/g) || [];
+  expect(h1s).toHaveLength(1);
+  expect(html).toMatch(/<h1[^>]*>\s*Hudson Hensley\s*<\/h1>/);
+  expect(html).toMatch(/href="#song-sung-blue"/);
+  expect(html).toMatch(/href="https:\/\/www\.imdb\.com\/name\/nm16617332\/"[^>]*target="_blank"[^>]*rel="noopener"/);
+  expect(html).toMatch(/<img[^>]+alt="Hudson Hensley, headshot"/);
+});
