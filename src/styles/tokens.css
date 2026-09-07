@@ -1,0 +1,43 @@
+:root {
+  /* Colour */
+  --navy-900: #041a33;
+  --navy-800: #0d2a4e;
+  --navy-600: #133763;
+  --blue: #2563EB;
+  --blue-hover: #1D4ED8;
+  --blue-onNavy: #60A5FA;
+  --paper: #FFFFFF;
+  --ink: #1F2937;
+  --card: #F3F4F6;
+  --border: #E5E7EB;
+  --imdb: #F5C518;
+
+  /* Type families */
+  --font-body: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Titan One", "Arial Rounded MT Bold", system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-1: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --step-2: clamp(1.375rem, 1.25rem + 0.65vw, 1.75rem);
+  --step-3: clamp(1.625rem, 1.45rem + 0.95vw, 2.25rem);
+  --step-4: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+  --step-5: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --step-6: clamp(3rem, 2.3rem + 3.6vw, 5.25rem);
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 2.5rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 4.5rem;
+  --space-10: 5rem;
+
+  /* Layout */
+  --maxw: 1100px;
+  --radius: 14px;
+}

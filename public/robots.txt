@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hudsonhensley.com/sitemap-index.xml

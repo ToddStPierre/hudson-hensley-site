@@ -1,0 +1,20 @@
+@import "./tokens.css";
+
+@font-face { font-family:"Outfit"; src:url("/src/fonts/Outfit-Light.woff2") format("woff2"); font-weight:300; font-display:swap; }
+@font-face { font-family:"Outfit"; src:url("/src/fonts/Outfit-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+@font-face { font-family:"Outfit"; src:url("/src/fonts/Outfit-Medium.woff2") format("woff2"); font-weight:500; font-display:swap; }
+@font-face { font-family:"Outfit"; src:url("/src/fonts/Outfit-SemiBold.woff2") format("woff2"); font-weight:600; font-display:swap; }
+@font-face { font-family:"Outfit"; src:url("/src/fonts/Outfit-Bold.woff2") format("woff2"); font-weight:700; font-display:swap; }
+@font-face { font-family:"Titan One"; src:url("/src/fonts/TitanOne-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:var(--step-0); line-height:1.6; -webkit-font-smoothing:antialiased; }
+h1,h2 { font-family:var(--font-display); font-weight:400; line-height:1.05; letter-spacing:.01em; }
+img { max-width:100%; height:auto; display:block; }
+a { color:var(--blue); text-decoration-thickness:.08em; text-underline-offset:.15em; }
+a:hover { color:var(--blue-hover); }
+:focus-visible { outline:3px solid var(--blue); outline-offset:2px; border-radius:4px; }
+.container { width:min(100% - 2*var(--space-3), var(--maxw)); margin-inline:auto; }
+.section { padding-block:var(--space-8); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
