@@ -12,7 +12,8 @@
     "astro": "astro",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "lhci": "lhci autorun"
+    "lhci": "lhci autorun",
+    "verify": "astro build && vitest run && node scripts/check-integrity.mjs && playwright test && lhci autorun"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
