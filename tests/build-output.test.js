@@ -84,3 +84,23 @@ test("footer: verbatim credit and outbound social links", () => {
   expect(html).toMatch(/href="https:\/\/www\.instagram\.com\/thehudsonhensley"[^>]*rel="noopener"/);
   expect(html).toMatch(/href="https:\/\/www\.tiktok\.com\/@thehudsonhensley_"[^>]*rel="noopener"/);
 });
+
+test("head: Person JSON-LD with all three sameAs, OG image, one canonical", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  const ld = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  expect(ld["@type"]).toBe("Person");
+  expect(ld.sameAs).toEqual(expect.arrayContaining([
+    "https://www.imdb.com/name/nm16617332/",
+    "https://www.instagram.com/thehudsonhensley",
+    "https://www.tiktok.com/@thehudsonhensley_",
+  ]));
+  expect(html).toMatch(/<meta property="og:image" content="https:\/\/hudsonhensley\.com\/og-image\.jpg"/);
+  expect((html.match(/rel="canonical"/g) || []).length).toBe(1);
+});
+
+test("sections appear in the designed order", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  const order = ["id=\"home\"", "id=\"song-sung-blue\"", "class=\"award\"", "id=\"film-tv\"", "id=\"press\"", "id=\"about\"", "id=\"contact\""];
+  let last = -1;
+  for (const token of order) { const i = html.indexOf(token); expect(i).toBeGreaterThan(last); last = i; }
+});

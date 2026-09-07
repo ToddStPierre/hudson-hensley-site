@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import Seo from "../components/Seo.astro";
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import TrailerFeature from "../components/TrailerFeature.astro";
@@ -9,9 +10,12 @@ import Press from "../components/Press.astro";
 import About from "../components/About.astro";
 import Representation from "../components/Representation.astro";
 import Footer from "../components/Footer.astro";
+import { loadSite } from "../content/site.schema.ts";
 import "../styles/global.css";
+const site = loadSite();
 ---
-<Base title="Hudson Hensley — Actor" description="Hudson Hensley is a young actor; his breakout role is Dayna Cartwright in Song Sung Blue.">
+<Base title="Hudson Hensley — Actor" description={site.tagline}>
+  <Seo slot="head" />
   <Nav />
   <main>
     <Hero />
@@ -23,4 +27,5 @@ import "../styles/global.css";
     <Representation />
   </main>
   <Footer />
+  <script src="../scripts/reveal.js"></script>
 </Base>
