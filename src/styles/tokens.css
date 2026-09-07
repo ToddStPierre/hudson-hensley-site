@@ -11,6 +11,7 @@
   --card: #F3F4F6;
   --border: #E5E7EB;
   --imdb: #F5C518;
+  --danger: #b91c1c;
   --on-navy: #FFFFFF;
   --rule-onNavy: rgba(255, 255, 255, 0.12);
 
@@ -19,6 +20,7 @@
   --font-display: "Titan One", "Arial Rounded MT Bold", system-ui, sans-serif;
 
   /* Fluid type scale */
+  --step--1: clamp(0.78rem, 0.75rem + 0.15vw, 0.85rem);
   --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   --step-1: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
   --step-2: clamp(1.375rem, 1.25rem + 0.65vw, 1.75rem);

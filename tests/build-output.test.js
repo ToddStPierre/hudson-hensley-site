@@ -80,7 +80,7 @@ test("contact form: posts to Web3Forms with the access key and honeypot", () => 
 
 test("footer: verbatim credit and outbound social links", () => {
   const html = readFileSync("dist/index.html", "utf8");
-  expect(html).toContain("© Copyright Hudson Hensley 2026. All rights reserved. Website Created & Hosted By: More Views Pro.");
+  expect(html).toMatch(/© Copyright Hudson Hensley 2026\. All rights reserved\. Website Created &(amp;)? Hosted By: More Views Pro\./);
   expect(html).toMatch(/href="https:\/\/www\.instagram\.com\/thehudsonhensley"[^>]*rel="noopener"/);
   expect(html).toMatch(/href="https:\/\/www\.tiktok\.com\/@thehudsonhensley_"[^>]*rel="noopener"/);
 });

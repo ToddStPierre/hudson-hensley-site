@@ -7,12 +7,12 @@ const { socials, footerCredit } = loadSite();
     <ul class="site-footer__socials">
       {socials.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>)}
     </ul>
-    <p class="site-footer__credit" set:html={footerCredit}></p>
+    <p class="site-footer__credit">{footerCredit}</p>
   </div>
 </footer>
 <style>
   .site-footer { background:var(--navy-900); color:color-mix(in srgb, var(--on-navy) 75%, transparent); padding-block:var(--space-6); margin-top:var(--space-8); }
   .site-footer__socials { list-style:none; display:flex; gap:var(--space-4); justify-content:center; padding:0; margin:0 0 var(--space-3); }
   .site-footer__socials a { color:var(--on-navy); text-decoration:none; }
-  .site-footer__credit { text-align:center; font-size:var(--step-0); margin:0; }
+  .site-footer__credit { text-align:center; font-size:var(--step--1); margin:0; }
 </style>
