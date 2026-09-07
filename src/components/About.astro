@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import { loadSite } from "../content/site.schema.ts";
+import portrait from "../assets/portrait.jpg";
+const { about } = loadSite();
+---
+<section id="about" class="section about">
+  <div class="container about__grid">
+    <Image src={portrait} alt={about.imageAlt} loading="lazy" widths={[360, 540, 720]} sizes="(min-width:720px) 40vw, 90vw" class="about__img" />
+    <div>
+      <h2>{about.heading}</h2>
+      {about.paragraphs.map((p) => <p class="about__p">{p}</p>)}
+      <p class="about__based">{about.basedIn}</p>
+    </div>
+  </div>
+</section>
+<style>
+  .about__grid { display:grid; gap:var(--space-4); }
+  @media (min-width:720px) { .about__grid { grid-template-columns:40% 1fr; align-items:start; } }
+  .about__img { border-radius:var(--radius); width:100%; }
+  .about__based { font-weight:600; color:var(--blue); }
+</style>

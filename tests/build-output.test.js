@@ -50,3 +50,11 @@ test("press: three cards, each linking out to the real article", () => {
     expect(html).toMatch(new RegExp(`href="https://[^"]*${host.replace(".", "\\.")}[^"]*"[^>]*target="_blank"[^>]*rel="noopener"`));
   }
 });
+
+test("about: portrait with alt, based-in line, two body paragraphs", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/id="about"/);
+  expect(html).toMatch(/<img[^>]+alt="Hudson Hensley portrait"/);
+  expect(html).toMatch(/Based in Los Angeles and Nashville\./);
+  expect((html.match(/class="about__p"/g) || []).length).toBe(2);
+});
