@@ -12,8 +12,8 @@ test("build produces index.html and the CNAME file", () => {
   expect(readFileSync("dist/CNAME", "utf8").trim()).toBe("hudsonhensley.com");
 });
 
-test("index.html loads the token + global stylesheet and sets lang", () => {
+test("index.html applies the design tokens and sets lang", () => {
   const html = readFileSync("dist/index.html", "utf8");
   expect(html).toMatch(/<html[^>]*lang="en"/);
-  expect(html).toMatch(/rel="stylesheet"/);
+  expect(html).toMatch(/--navy-900|--blue\b/);
 });
