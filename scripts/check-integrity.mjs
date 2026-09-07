@@ -13,7 +13,7 @@ for (const id of new Set(anchors)) {
 // 2. every referenced asset exists in dist/
 const assets = [...html.matchAll(/(?:src|href)="(\/[^"]+\.(?:jpg|jpeg|png|webp|avif|svg|css|js|xml|woff2))"/g)].map((m) => m[1]);
 for (const a of new Set(assets)) {
-  if (!existsSync(`dist${a}`)) errors.push(`missing asset: ${a}`);
+  if (!existsSync(`dist${a.replace("/hudson-hensley-site", "")}`)) errors.push(`missing asset: ${a}`);
 }
 
 // 3. CNAME + sitemap + social share image present
