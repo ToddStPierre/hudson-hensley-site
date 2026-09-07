@@ -32,3 +32,12 @@ test("award strip renders the verbatim nomination line", () => {
   const html = readFileSync("dist/index.html", "utf8");
   expect(html).toMatch(/Nominated — 2026 Young Artist Academy Award, Feature Film Artists\./);
 });
+
+test("film & tv: three credit cards incl. Song Sung Blue and Stage", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  expect(html).toMatch(/id="film-tv"/);
+  expect((html.match(/class="card"/g) || []).length).toBe(3);
+  expect(html).toMatch(/Song Sung Blue/);
+  expect(html).toMatch(/The Wildman of Shaggy Creek/);
+  expect(html).toMatch(/Thirteen Jr\. and Legally Blonde Jr\., Nashville Theatre School\./);
+});

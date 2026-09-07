@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+const images = import.meta.glob("../assets/*.jpg", { eager: true, import: "default" });
+interface Props {
+  title: string;
+  year: string | null;
+  role: string | null;
+  note: string | null;
+  image: string | null;
+  imageAlt: string | null;
+}
+const { title, year, role, note, image, imageAlt } = Astro.props;
+const img = image ? (images[`../assets/${image}`] as ImageMetadata) : null;
+const meta = [year, role].filter(Boolean).join(" · ");
+---
+<li class="card">
+  {img && (
+    <button
+      class="card__media"
+      data-full={img.src}
+      data-alt={imageAlt}
+      aria-label={`Enlarge photo: ${imageAlt}`}
+    >
+      <Image src={img} alt={imageAlt ?? ""} widths={[320, 480, 640]} sizes="(min-width:720px) 45vw, 90vw" />
+    </button>
+  )}
+  <h3>{title}</h3>
+  {meta && <p class="card__meta">{meta}</p>}
+  {note && <p class="card__note">{note}</p>}
+</li>
+<style>
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; padding-bottom:var(--space-3); }
+  .card__media { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; aspect-ratio:2/3; }
+  .card__media :global(img) { width:100%; height:100%; object-fit:cover; }
+  .card h3 { font-family:var(--font-body); font-weight:700; font-size:var(--step-1); margin:var(--space-3) var(--space-3) 0; }
+  .card__meta { margin:var(--space-1) var(--space-3) 0; color:var(--blue); font-weight:600; }
+  .card__note { margin:var(--space-2) var(--space-3) 0; }
+</style>

@@ -1,0 +1,27 @@
+---
+import { loadSite } from "../content/site.schema.ts";
+import CreditCard from "./CreditCard.astro";
+const { credits } = loadSite();
+---
+<section id="film-tv" class="section filmtv">
+  <div class="container">
+    <h2>Film &amp; TV</h2>
+    <ul class="filmtv__grid">
+      {credits.map((c) => <CreditCard {...c} />)}
+    </ul>
+  </div>
+</section>
+<dialog class="lightbox">
+  <button class="lightbox__close" aria-label="Close">✕</button>
+  <img alt="" />
+</dialog>
+<style>
+  .filmtv__grid { list-style:none; margin:var(--space-5) 0 0; padding:0; display:grid; gap:var(--space-4); }
+  @media (min-width:720px) { .filmtv__grid { grid-template-columns:repeat(3, 1fr); align-items:start; } }
+  .lightbox { border:0; padding:0; background:transparent; max-width:min(92vw, 640px); overflow:visible; }
+  /* raw rgba kept for ::backdrop — analogous to the accepted hero-scrim exception (no token for a translucent navy) */
+  .lightbox::backdrop { background:rgba(4,26,51,.85); }
+  .lightbox img { display:block; width:100%; border-radius:var(--radius); }
+  .lightbox__close { position:absolute; top:-40px; right:0; background:none; border:0; color:var(--on-navy); font-size:1.5rem; line-height:1; cursor:pointer; }
+</style>
+<script src="../scripts/lightbox.js"></script>
