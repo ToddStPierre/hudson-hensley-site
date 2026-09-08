@@ -1,0 +1,15 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",      "title": "A · Cinematic (leading)", "x": 0,    "y": 0,    "w": 1440, "h": 2060 },
+    { "file": "Editorial.dc.html", "title": "B · Editorial",            "x": 1580, "y": 0,    "w": 1440, "h": 1960 },
+    { "file": "Kinetic.dc.html",   "title": "C · Kinetic",              "x": 0,    "y": 2260, "w": 1440, "h": 1480 },
+    { "file": "Marquee.dc.html",   "title": "D · Marquee",              "x": 1580, "y": 2260, "w": 1440, "h": 1640 }
+  ],
+  "annotations": [
+    { "id": "note-a", "x": 0,    "y": -150, "w": 620, "text": "DIRECTION A · CINEMATIC  (my leading pick)\nDark film-poster feel in your existing navy + IMDb gold. Reads as a working screen actor — most industry-standard. Trade-off: leans on strong photography to sing." },
+    { "id": "note-b", "x": 1580, "y": -150, "w": 620, "text": "DIRECTION B · EDITORIAL\nLight magazine-profile look: serif headlines, generous white space, a press pull-quote. Refined and press-forward. Trade-off: quieter and more grown-up, less 'movie'." },
+    { "id": "note-c", "x": 0,    "y": 2110, "w": 620, "text": "DIRECTION C · KINETIC\nBold and young — oversized type, an electric accent, a credits marquee. Feels energetic and current. Trade-off: the loudest option; a strong look can date faster." },
+    { "id": "note-d", "x": 1580, "y": 2110, "w": 620, "text": "DIRECTION D · MARQUEE\nWarm theatrical playbill in cream / oxblood / gold, nodding to the Nashville stage roots. Classic and elegant. Trade-off: reads more 'theatre' than 'screen'; most traditional." }
+  ],
+  "launch": { "view": "canvas" }
+}

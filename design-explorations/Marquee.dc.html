@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Outfit:wght@400;500;600&display=swap">
+  <style>
+    body { margin:0; background:#f6efe3; font-family:"Outfit", system-ui, sans-serif; }
+    .mq a { color:#b08d3e; }
+  </style>
+</helmet>
+<div class="mq" style="width:1440px; background:#f6efe3; color:#2a1416; font-family:'Outfit',system-ui,sans-serif;">
+
+  <!-- Nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; background:#5a1f22; color:#f6efe3;">
+    <span style="font-family:'Playfair Display',serif; font-weight:700; font-size:24px; letter-spacing:.02em;">Hudson Hensley</span>
+    <div style="display:flex; align-items:center; gap:36px; font-size:13px; font-weight:500; letter-spacing:.16em; text-transform:uppercase;">
+      <span style="color:#e7c877;">Home</span>
+      <span style="color:rgba(246,239,227,.8);">Film &amp; TV</span>
+      <span style="color:rgba(246,239,227,.8);">Press</span>
+      <span style="color:rgba(246,239,227,.8);">About</span>
+    </div>
+  </div>
+
+  <!-- Playbill hero -->
+  <div style="padding:64px 64px 56px; text-align:center; border-bottom:2px solid #d8c39a;">
+    <div style="display:inline-flex; align-items:center; gap:16px; font-size:12px; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:#b08d3e; margin-bottom:26px;">
+      <span style="width:44px; height:1px; background:#b08d3e;"></span>
+      Los Angeles · Nashville
+      <span style="width:44px; height:1px; background:#b08d3e;"></span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif; font-weight:900; font-size:104px; line-height:.98; margin:0 0 8px; color:#2a1416;">Hudson Hensley</h1>
+    <div style="font-family:'Playfair Display',serif; font-style:italic; font-weight:500; font-size:26px; color:#5a1f22; margin-bottom:34px;">Actor of Screen &amp; Stage</div>
+
+    <div style="max-width:900px; margin:0 auto 40px; padding:26px 0; border-top:1px solid #d8c39a; border-bottom:1px solid #d8c39a;">
+      <div style="font-family:'Playfair Display',serif; font-size:22px; line-height:1.5; color:#3a2224;">Breakout role in <em>Song Sung Blue</em> — the 2025 musical drama opposite <strong style="font-weight:700;">Hugh Jackman</strong> and <strong style="font-weight:700;">Kate Hudson</strong>.</div>
+    </div>
+
+    <div style="display:flex; gap:16px; justify-content:center;">
+      <span style="display:inline-flex; align-items:center; gap:10px; background:#5a1f22; color:#f6efe3; font-weight:600; font-size:16px; padding:15px 30px; border-radius:3px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#f6efe3"><path d="M8 5v14l11-7z"/></svg>
+        Watch the trailer
+      </span>
+      <span style="display:inline-flex; align-items:center; gap:10px; background:transparent; border:1.5px solid #5a1f22; color:#5a1f22; font-weight:600; font-size:16px; padding:15px 30px; border-radius:3px;">IMDb Profile</span>
+    </div>
+  </div>
+
+  <!-- Two-up: portrait + award -->
+  <div style="display:grid; grid-template-columns:1fr 1.05fr; gap:0;">
+    <div style="height:520px; overflow:hidden;">
+      <img src="ssb.jpg" alt="Hudson Hensley in Song Sung Blue" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div style="background:#2a1416; color:#f6efe3; padding:66px 64px; display:flex; flex-direction:column; justify-content:center;">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="#e7c877" style="margin-bottom:22px;"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.7 1.2 6.6L12 18.6 6.1 20.3l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg>
+      <div style="font-family:'Playfair Display',serif; font-style:italic; font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:#e7c877; margin-bottom:16px;">Award Nomination</div>
+      <div style="font-family:'Playfair Display',serif; font-size:34px; line-height:1.28; margin-bottom:20px;">Nominated — 2026 Young Artist Academy Award</div>
+      <div style="font-size:16px; color:rgba(246,239,227,.75);">Feature Film Artists, for his role as Dayna Cartwright in <em>Song Sung Blue</em>.</div>
+    </div>
+  </div>
+
+  <!-- Repertoire -->
+  <div style="padding:72px 64px; text-align:center;">
+    <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size:38px; margin:0 0 8px;">Repertoire</h2>
+    <div style="width:70px; height:2px; background:#b08d3e; margin:0 auto 44px;"></div>
+    <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:36px; text-align:left;">
+      <div style="padding-top:22px; border-top:2px solid #2a1416;">
+        <div style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:6px;">Song Sung Blue</div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#b08d3e; margin-bottom:12px;">2025 · Dayna Cartwright</div>
+        <div style="font-size:15px; line-height:1.6; color:#5a4a4c;">Musical drama written and directed by Craig Brewer; starring Hugh Jackman and Kate Hudson.</div>
+      </div>
+      <div style="padding-top:22px; border-top:2px solid #2a1416;">
+        <div style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:6px;">The Wildman of Shaggy Creek</div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#b08d3e; margin-bottom:12px;">Lead · Scott</div>
+        <div style="font-size:15px; line-height:1.6; color:#5a4a4c;">Lead role in the independent feature, adapted from a children's book.</div>
+      </div>
+      <div style="padding-top:22px; border-top:2px solid #2a1416;">
+        <div style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:6px;">On Stage</div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#b08d3e; margin-bottom:12px;">Nashville Theatre School</div>
+        <div style="font-size:15px; line-height:1.6; color:#5a4a4c;">Thirteen Jr. and Legally Blonde Jr.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
